@@ -1,7 +1,17 @@
-<h1>Users#show</h1>
+<hr>
+<h1>プロフィール</h1>
 
-  <h3>メールアドレス</h3>
-  <%= current_user.email %>
+<p>
+  <% if current_user.avatar.attached? %>
+    <%= image_tag current_user.avatar %>
+  <% end %>
+</p>
 
+<h3>名前</h3>
+<%= current_user.name %>
 
-<p>Find me in app/views/users/show.html.erb</p>
+<h3>年齢</h3>
+<%= current_user.age %>
+
+<h3>メールアドレス</h3>
+<%= current_user.email %> 
